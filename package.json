@@ -1,0 +1,20 @@
+{
+  "name": "map-filter-reduce-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davified/native-array-methods-exercises"
+  },
+  "author": "Wes Reid",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
+}
