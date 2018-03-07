@@ -1,19 +1,14 @@
-function multiplyBy10(array) {
-  return array;
-}
+// 1.
+const multiplyBy10 = array => array.map(x => x * 10);
 
-function onlyVowels(array) {
-  return array;
-}
+//2.
+const onlyVowels = array => array.map(x => x.replace(/[^aeiou]/gi, ""));
 
-function doubleMatrix(array) {
-  return array;
-}
+//3.
+const doubleMatrix = arrayRow => arrayElement => arrayElement.map(x => x * 2);
 
-function onlyNames(array) {
-  return array;
-}
-
+//4. ???
+const onlyNames = array => array.map(x => x["name"]);
 module.exports = {
   multiplyBy10: multiplyBy10,
   onlyVowels: onlyVowels,
