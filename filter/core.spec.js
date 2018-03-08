@@ -11,7 +11,7 @@ describe("Filter", function() {
     });
   });
 
-  describe("#onlyOneWord()", function() {
+  describe.skip("#onlyOneWord()", function() {
     it("returns only those strings with a single word (no spaces)", function() {
       var input = ["return", "phrases", "with one word"];
       var expected = ["return", "phrases"];

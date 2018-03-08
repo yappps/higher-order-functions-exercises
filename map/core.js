@@ -5,6 +5,7 @@ const multiplyBy10 = array => array.map(x => x * 10);
 const onlyVowels = array => array.map(x => x.replace(/[^aeiou]/gi, ""));
 
 //3.
+// COMMENT: ArrayRow can be better named (e.g. doubleNumbers). functions should usually be a verb/action
 function ArrayRow(row){
   return row.map(x=> x*2);
 }

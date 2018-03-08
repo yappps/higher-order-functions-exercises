@@ -18,22 +18,28 @@ function onlyOneWord(array) {
   return array.filter(noSpaceWord); 
 }
 */
-const onlyOneWord = array => array.filter(string => string.search(/\s/) === 1);
 
-// 3. 
+// COMMENT: you're really close! you can use console.logs or the debugger to get visibility/feedback into what the code is doing
+const onlyOneWord = array =>
+  array.filter(string => {
+    console.log(string.search(/\s/));
+    return string.search(/\s/) === 1;
+  });
+
+// 3.
 function positiveElements(element) {
   return element > 0;
 }
-function positiveRows(row){
+function positiveRows(row) {
   return row.every(positiveElements);
 }
-function positiveRowsOnly(matrix){
-  return matrix.filter(positiveRows); 
+function positiveRowsOnly(matrix) {
+  return matrix.filter(positiveRows);
 }
 
-//4. 
+//4.
 function truthyValuesOnly(array) {
-  return array.filter(currentValue => currentValue? true: false);
+  return array.filter(currentValue => (currentValue ? true : false));
 }
 
 module.exports = {

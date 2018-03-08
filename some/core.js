@@ -29,6 +29,7 @@ function truePossibilities(matrix) {
 */
 const truePossibilities = matrix =>
   matrix.some(row => row.some(num => num === true));
+  // COMMENT: num can be better named
 //4.
 // Check to see if 'Lost' is in
 // the phrase (using some).

@@ -18,6 +18,7 @@ function productAll(matrix){
   // return matrix.productofElementsInArray(wrongResult); 
     const flatten_array=matrix.reduce(rowReducer);
     return flatten_array.reduce(productofElementsInArray);
+    // COMMENT: you can follow the javascript naming convention
 }
 
 // soltion: Method 1
@@ -38,6 +39,7 @@ function luckyNumbers(array) {
   var print = "Your lucky numbers are: ";
   const reducer = (accumulator, currentNumber) => accumulator + currentNumber + (array[array.length-1]== currentNumber? ".": ", "); 
   return array.reduce(reducer,print);
+  // nice solution for a strange/awkward question!
 }
 
 module.exports = {
