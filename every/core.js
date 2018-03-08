@@ -1,11 +1,25 @@
+//1. 
 // Check to see if all elements in an array
 // are even numbers.
 
+/*    traditional Method
 function isEvenNumbers(currentValue) {
   return currentValue % 2 === 0;
 }
 const allEven = input => input.every(isEvenNumbers);
-// another method: input.every(element=> element %2 ===0)
+*/ 
+
+const allEven = array => array.every(currentValue => currentValue %2 ===0);  
+
+/*    Solution 
+function allEven(input){
+  const isEvenNumber = function(num) {
+    return num%2 ===0;
+  }
+  return input.every(isEvenNumbers);
+}
+*/
+
 
 // Check to see if every element in the matrix is
 // an array and that every element in the array is
@@ -16,6 +30,16 @@ function isAnArrayAndGreaterThan0(currentRow) {
 }
 const positiveMatrix = matrix => matrix.every(isAnArrayAndGreaterThan0);
 
+
+/*  solution
+function positiveMatrix(inputMatrix) {
+  const isPositiveRow = function(row) {
+    return row.every(num => num > 0);
+  };
+  return inputMatrix.every(isPositiveRow);
+}
+*/
+ 
 module.exports = {
   allEven,
   positiveMatrix

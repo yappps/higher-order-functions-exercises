@@ -12,7 +12,7 @@ describe("Reduce", function() {
   });
 
   describe("#productAll()", function() {
-    it("return the product of all items in the matrix", function() {
+    it.only("return the product of all items in the matrix", function() {
       var input = [[1, 2, 3], [4, 5], [6]];
       var expected = 720;
       var actual = core.productAll(input);

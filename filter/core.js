@@ -1,29 +1,39 @@
+//1. onlyEven
 
-
-// 1. onlyEven
-function onlyEven(array){
-  let new_array = array.filter(currentValue => (currentValue % 2 === 0));
-  return new_array;
+/* Method 1
+function onlyEven(array) {
+  return array.filter(currentValue => currentValue % 2 === 0);
 }
-// ?? const onlyEven = array.filter(currentValue => (currentValue % 2===0) );
-  
+*/
+// Method 2
+const onlyEven = array => array.filter(currentValue => currentValue % 2 === 0);
+
 // 2. onlyOneWord
-function onlyOneWord(array){
-  let new_array= array.filter(currentValue => !currentValue.search(/\s/g));
-  return new_array; 
+
+/* traditional method 
+function noSpaceWord(string){
+  return string.search(/\s/) === -1; 
+}
+function onlyOneWord(array) {
+  return array.filter(noSpaceWord); 
+}
+*/
+const onlyOneWord = array => array.filter(string => string.search(/\s/) === 1);
+
+// 3. 
+function positiveElements(element) {
+  return element > 0;
+}
+function positiveRows(row){
+  return row.every(positiveElements);
+}
+function positiveRowsOnly(matrix){
+  return matrix.filter(positiveRows); 
 }
 
-function positiveRowsOnly(array) {
-  let new_arrays= array.filter(currentRowArray => currentRowArray.filter(currentElement => currentElement > 0));
-
-  return new_arrays; 
-}
-
-
+//4. 
 function truthyValuesOnly(array) {
-  let new_array = array.filter(currentElement => typeof currentElement !== "undefined"); 
-
-  return new_array;
+  return array.filter(currentValue => currentValue? true: false);
 }
 
 module.exports = {

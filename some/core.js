@@ -1,32 +1,47 @@
 // 1.
 // Check to see if any of the elements in the
 // array are numbers greater than 10.
-function anyGreaterThan10(input) {
-  var ans = input.some(x => x > 10);
-  return ans;
+function anyGreaterThan10(array) {
+  return array.some(element => element > 10);
 }
 
 //2.
 // Check to see if any of the strings in
 // the array is longer than 10 characters.
-function longWord(input) {
-  var ans = input.some(x => x.length > 10);
+function longWord(array) {
+  var ans = array.some(word => word.length > 10);
   return ans;
 }
 
 //3.
 // Check to see if any of the elements in
 // the matrix are true.
-function truePossibilities(input) {
-  return input;
+/*  Traditional 
+function postiveElement(num) {
+  return num === true;
 }
-
+function positiveRow(row) {
+  return row.some(postiveElement);
+}
+function truePossibilities(matrix) {
+  return matrix.some(positiveRow);
+}
+*/
+const truePossibilities = matrix =>
+  matrix.some(row => row.some(num => num === true));
 //4.
 // Check to see if 'Lost' is in
 // the phrase (using some).
-function lostCarcosa(input) {
-  return input;
+
+/*    traditional method
+function lostCarcosa(array) {
+  return array.some(string => /Lost/.test(string)); 
+  // note: regex.test(string) will return T / F
 }
+*/
+
+const lostCarcosa = array => array.some(string => /Lost/.test(string));
+// note: regex.test(string) will return T / F
 
 module.exports = {
   anyGreaterThan10,
